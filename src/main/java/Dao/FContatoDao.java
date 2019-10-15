@@ -27,7 +27,7 @@ public class FContatoDao implements InterfaceDAO<FContato> {
 	}
 
 	@Override
-	public List<FContato> getAll() {
+	public ObservableList<FContato> getAll() {
 		if (contatos == null) {
 			EntityManager entityMng = Conection.getEntityManager();
 			contatos = FXCollections.observableArrayList(

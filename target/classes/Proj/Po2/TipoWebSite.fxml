@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="642.0" prefWidth="800.0" styleClass="imagem1" stylesheets="@imagem.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MaisInfoController">
+<AnchorPane prefHeight="642.0" prefWidth="800.0" styleClass="imagem1" stylesheets="@imagem.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TipoWebController">
    <children>
       <GridPane alignment="CENTER" layoutX="16.0" prefHeight="642.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -58,7 +58,7 @@
                   </Text>
                </children>
             </TextFlow>
-            <ComboBox fx:id="a" onDragDetected="#itens" prefHeight="66.0" prefWidth="404.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <ComboBox fx:id="CbTipo" prefHeight="66.0" prefWidth="404.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Button mnemonicParsing="false" onAction="#Continuar" prefHeight="48.0" prefWidth="126.0" text="Contituar" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
          </children>
       </GridPane>

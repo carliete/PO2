@@ -4,11 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class TipoWeb {
+public class Idioma {
 
 	@Id
 	private String cod;
-	private String tipo;
+	private String IdioNome;
+
+	public String getIdioNome() {
+		return IdioNome;
+	}
 
 	public String getCod() {
 		return cod;
@@ -18,12 +22,8 @@ public class TipoWeb {
 		this.cod = cod;
 	}
 
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setIdioNome(String idioNome) {
+		IdioNome = idioNome;
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class TipoWeb {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		TipoWeb other = (TipoWeb) obj;
+		Idioma other = (Idioma) obj;
 		if (cod == null) {
 			if (other.cod != null)
 				return false;
@@ -51,19 +51,19 @@ public class TipoWeb {
 		return true;
 	}
 
-	public TipoWeb(String cod, String tipo) {
+	public Idioma(String cod, String idioNome) {
 		super();
 		this.cod = cod;
-		this.tipo = tipo;
+		IdioNome = idioNome;
 	}
 
-	public TipoWeb() {
+	public Idioma() {
 		super();
 	}
 
 	@Override
 	public String toString() {
-		return (getCod() + "   " + getTipo());
+		return (getCod() + "    " + getIdioNome());
 	}
 	
 	

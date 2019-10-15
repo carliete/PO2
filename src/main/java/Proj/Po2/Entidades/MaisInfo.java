@@ -1,7 +1,16 @@
 package Proj.Po2.Entidades;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+import CbListas.Privacidade;
+import CbListas.TipoWeb;
+import CbListas.Area;
+import CbListas.Idioma;
 
 @Entity
 public class MaisInfo {
@@ -9,23 +18,9 @@ public class MaisInfo {
 	private String PalaChave;
 	private String Nome;
 	private String Area;
-	private String Priv;
 	private String Idioma;
+	private String Privacidade;
 	private String Tipo;
-
-	public MaisInfo(String palaChave, String nome, String area, String priv, String idioma, String tipo) {
-		super();
-		PalaChave = palaChave;
-		Nome = nome;
-		Area = area;
-		Priv = priv;
-		Idioma = idioma;
-		Tipo = tipo;
-	}
-
-	public MaisInfo() {
-		super();
-	}
 
 	public String getPalaChave() {
 		return PalaChave;
@@ -51,20 +46,28 @@ public class MaisInfo {
 		Area = area;
 	}
 
-	public String getPriv() {
-		return Priv;
-	}
-
-	public void setPriv(String priv) {
-		Priv = priv;
-	}
-
 	public String getIdioma() {
 		return Idioma;
 	}
 
 	public void setIdioma(String idioma) {
 		Idioma = idioma;
+	}
+
+	public String getPrivacidade() {
+		return Privacidade;
+	}
+
+	public void setPrivacidade(String privacidade) {
+		Privacidade = privacidade;
+	}
+
+	public String getTipo() {
+		return Tipo;
+	}
+
+	public void setTipo(String tipo) {
+		Tipo = tipo;
 	}
 
 	@Override
@@ -92,11 +95,18 @@ public class MaisInfo {
 		return true;
 	}
 
-	public String getTipo() {
-		return Tipo;
-	}
-
-	public void setTipo(String tipo) {
+	public MaisInfo(String palaChave, String nome, String area, String idioma, String privacidade, String tipo) {
+		super();
+		PalaChave = palaChave;
+		Nome = nome;
+		Area = area;
+		Idioma = idioma;
+		Privacidade = privacidade;
 		Tipo = tipo;
 	}
+
+	public MaisInfo() {
+		super();
+	}
+
 }

@@ -27,7 +27,7 @@ public class PerfilDao implements InterfaceDAO<Perfil>{
 	}
 
 	@Override
-	public List<Perfil> getAll() {
+	public ObservableList<Perfil> getAll() {
 		if (perfis == null) {
 			EntityManager entityMng = Conection.getEntityManager();
 			perfis = FXCollections.observableArrayList(

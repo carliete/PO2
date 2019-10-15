@@ -25,7 +25,7 @@
             <Button mnemonicParsing="false" onAction="#Voltar" text="Voltar" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
             <TextFlow prefHeight="46.0" prefWidth="600.0" styleClass="imagem1" stylesheets="@imagem.css" textAlignment="CENTER">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Suas telas aparecerão aqui" textAlignment="CENTER">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SEUS WEBSITES APARECERÃO AQUI" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="22.0" />
                      </font>
@@ -33,7 +33,8 @@
                </children>
             </TextFlow>
             <ListView fx:id="Lista" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#delete" text="Apagar Pagina" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#delete" text="Apagar WebSite" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <Button mnemonicParsing="false" text="Editar WebSite" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
          </children>
       </GridPane>
    </children>

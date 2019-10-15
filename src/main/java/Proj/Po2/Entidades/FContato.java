@@ -51,6 +51,12 @@ public class FContato {
 			return false;
 		return true;
 	}
+	
+	
+	@Override
+	public String toString() {
+	    return "Assunto: " + Assunto + " " + "Mensagem: " +  Mensagem;
+	}
 	public FContato(String assunto, String mensagem) {
 		super();
 		Assunto = assunto;

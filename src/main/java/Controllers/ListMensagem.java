@@ -13,19 +13,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
-public class ListMensagem implements Initializable{
-	
+public class ListMensagem implements Initializable {
+
 	@FXML
 	private Label text;
 	@FXML
 	private ListView<FContato> listcont;
 	
+	ObservableList<FContato> contatinhos;
+
 	public void updateList() {
 		FContatoDao dao = new FContatoDao();
-		listcont.setItems(null);
-		listcont.setItems((ObservableList<FContato>) dao.getAll());
-	};
-	
+		contatinhos = dao.getAll();
+		listcont.setItems(contatinhos);
+	}
+
 	@FXML
 	private void Voltar(ActionEvent action) throws IOException {
 		App.setRoot("Contato");
@@ -34,9 +36,8 @@ public class ListMensagem implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		updateList();
-		
 	}
-	
+
 	@FXML
 	private void delete() {
 		try {
@@ -46,5 +47,4 @@ public class ListMensagem implements Initializable{
 			text.setText("Não foi possivel apagar a mensagem!");
 		}
 	}
-	
 }
