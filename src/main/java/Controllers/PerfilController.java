@@ -3,9 +3,7 @@ package Controllers;
 import java.io.IOException;
 
 import Dao.PerfilDao;
-import Dao.UserDao;
 import Proj.Po2.Entidades.Perfil;
-import Proj.Po2.Entidades.User;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,6 +14,7 @@ import javafx.scene.control.TextField;
 public class PerfilController {
 
 	ObservableList<Perfil> perfila;
+	
 	@FXML
 	private Label nomeUsuario;
 	@FXML

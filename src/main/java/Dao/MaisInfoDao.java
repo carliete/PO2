@@ -15,7 +15,15 @@ public class MaisInfoDao  implements InterfaceDAO<MaisInfo>  {
 	
 	@Override
 	public MaisInfo get(String id) {
-		return null;
+		if (MaisInfos != null)
+			for (MaisInfo infos : MaisInfos)
+				if (infos.getPalaChave().contentEquals(id))
+					return infos;
+
+		EntityManager entityMng = Conection.getEntityManager();
+		MaisInfo infos = entityMng.find(MaisInfo.class, id);
+		entityMng.close();
+		return infos;
 	}
 
 	@Override

@@ -113,5 +113,10 @@ public class MaisInfo {
 	public String toString() {
 		return ("Dominio =" + getPalaChave() + ", Nome=" + getNome() + ", Area=" + getArea() + ", Tipo=" + getTipo() + "");
 	}
+	
+	
+	public String toStringa() {
+		return getPalaChave();
+	}
 
 }

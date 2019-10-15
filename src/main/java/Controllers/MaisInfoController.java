@@ -37,9 +37,9 @@ public class MaisInfoController implements Initializable {
 	private List<Area> ListArea = new ArrayList<Area>();
 	private List<Idioma> ListIdioma = new ArrayList<Idioma>();
 	private List<Privacidade> ListPrivacidade = new ArrayList<Privacidade>();
-	private ObservableList<Area> ObsArea;
-	private ObservableList<Privacidade> ObsPriv;
-	private ObservableList<Idioma> ObsIdi;
+	static public ObservableList<Area> ObsArea;
+	static public ObservableList<Privacidade> ObsPriv;
+	static public ObservableList<Idioma> ObsIdi;
 
 	@FXML
 	private void Salvar(ActionEvent action) throws IOException {

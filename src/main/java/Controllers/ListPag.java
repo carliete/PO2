@@ -20,6 +20,8 @@ public class ListPag implements Initializable {
 	
 	private ObservableList<MaisInfo> list;
 	
+	public String cod;
+	
 	@FXML
 	private void delete() {
 		new MaisInfoDao().delete(Lista.getSelectionModel().getSelectedItem());
@@ -43,7 +45,8 @@ public class ListPag implements Initializable {
 	
 	@FXML
 	public void editarSite() throws IOException {
-		App.setRoot("Pag");
+		cod = Lista.getSelectionModel().getSelectedItem().getPalaChave();
+		App.setRoot("UpMaisInfo");
 	}
 	}
 

@@ -19,7 +19,7 @@ public class TipoWebController implements Initializable {
 	private ComboBox<TipoWeb> CbTipo;
 	
 	private List<TipoWeb> List = new ArrayList<TipoWeb>();
-	private ObservableList<TipoWeb> ObsTipos;
+	static public ObservableList<TipoWeb> ObsTipos;
 	
 	@FXML
 	private void Continuar() throws IOException {
@@ -28,7 +28,6 @@ public class TipoWebController implements Initializable {
 	}
 
 	public void CarregaTipo() {
-		
 		ObsTipos = FXCollections.observableArrayList(List);
 		CbTipo.setItems(ObsTipos);
 	}

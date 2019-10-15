@@ -1,7 +1,5 @@
 package Dao;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 
 import ConexaoBd.Conection;
