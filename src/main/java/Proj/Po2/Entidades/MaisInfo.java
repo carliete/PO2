@@ -109,4 +109,9 @@ public class MaisInfo {
 		super();
 	}
 
+	@Override
+	public String toString() {
+		return ("Dominio =" + getPalaChave() + ", Nome=" + getNome() + ", Area=" + getArea() + ", Tipo=" + getTipo() + "");
+	}
+
 }

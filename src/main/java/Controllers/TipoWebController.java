@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import CbListas.TipoWeb;
-import CbListas.TipoWebDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -19,18 +18,18 @@ public class TipoWebController implements Initializable {
 	@FXML
 	private ComboBox<TipoWeb> CbTipo;
 	
+	private List<TipoWeb> List = new ArrayList<TipoWeb>();
 	private ObservableList<TipoWeb> ObsTipos;
 	
 	@FXML
 	private void Continuar() throws IOException {
-		MaisInfoController.tipos = CbTipo.getSelectionModel().getSelectedItem();
-		System.out.println(CbTipo.getSelectionModel().getSelectedItem());
+		MaisInfoController.tipos = CbTipo.getSelectionModel().getSelectedItem().getTipo();
 		App.setRoot("MaisInfo");
 	}
 
 	public void CarregaTipo() {
-		TipoWebDao dao = new TipoWebDao();
-		ObsTipos = (ObservableList<TipoWeb>) dao.getAll();
+		
+		ObsTipos = FXCollections.observableArrayList(List);
 		CbTipo.setItems(ObsTipos);
 	}
 
@@ -43,7 +42,8 @@ public class TipoWebController implements Initializable {
 	
 	private void DadosTipo() {
 		TipoWeb tipo = new TipoWeb("1","Blog");
-		new TipoWebDao().add(tipo);
+		List.add(tipo);
+		
 	}
 	
 

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -14,99 +19,81 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="600.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PagController">
+<AnchorPane prefHeight="600.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PagController">
    <children>
-      <BorderPane prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <top>
-            <TextFlow prefHeight="53.0" prefWidth="600.0" styleClass="imagem1" stylesheets="@imagem.css" textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <GridPane prefHeight="600.0" prefWidth="688.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="90.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="215.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="43.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="297.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextFlow prefHeight="27.0" prefWidth="244.0" GridPane.rowIndex="1">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Preview" textAlignment="CENTER">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="26.0" />
+                        <Font size="18.0" />
                      </font>
                   </Text>
                </children>
             </TextFlow>
-         </top>
-         <left>
-            <AnchorPane prefHeight="536.0" prefWidth="200.0" styleClass="imagem1" stylesheets="@imagem.css" BorderPane.alignment="CENTER">
+            <TextField fx:id="TFnome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextFlow prefHeight="27.0" prefWidth="244.0" GridPane.rowIndex="3">
                <children>
-                  <TextFlow layoutX="2.0" layoutY="22.0" prefHeight="27.0" prefWidth="244.0" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="22.0">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </TextFlow>
-                  <TextField fx:id="TFnome" layoutX="14.0" layoutY="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Button layoutX="65.0" layoutY="91.0" mnemonicParsing="false" onAction="#alteraNome" prefHeight="25.0" prefWidth="73.0" text="Alterar" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="62.0" />
-                  <TextFlow layoutX="7.0" layoutY="140.0" prefHeight="27.0" prefWidth="244.0" AnchorPane.bottomAnchor="369.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="140.0">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtitulo">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </TextFlow>
-                  <TextField fx:id="TFsubtitulo" layoutX="1.0" layoutY="178.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Button layoutX="57.0" layoutY="231.0" mnemonicParsing="false" onAction="#alteraSubtitulo" prefHeight="25.0" prefWidth="106.0" text="Alterar" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="57.0" />
-                  <TextFlow layoutY="279.0" prefHeight="27.0" prefWidth="244.0">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Texto">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </TextFlow>
-                  <Button layoutX="65.0" layoutY="377.0" mnemonicParsing="false" onAction="#alteraTexto" prefHeight="25.0" prefWidth="106.0" text="Alterar" />
-                  <TextField fx:id="TFtexto" layoutX="-4.0" layoutY="318.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Button layoutX="91.0" layoutY="508.0" mnemonicParsing="false" onAction="#SVoltar" text="Voltar" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="96.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subtitulo">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
                </children>
-            </AnchorPane>
-         </left>
-         <center>
-            <AnchorPane prefHeight="534.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+            </TextFlow>
+            <TextField fx:id="TFsubtitulo" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#alteraNome" prefHeight="25.0" prefWidth="73.0" text="Alterar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#alteraSubtitulo" prefHeight="25.0" prefWidth="78.0" text="Alterar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextFlow prefHeight="27.0" prefWidth="244.0" GridPane.rowIndex="5">
                <children>
-                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="547.0" minWidth="10.0" prefWidth="38.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="583.0" minWidth="10.0" prefWidth="583.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="306.0" minHeight="10.0" prefHeight="129.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="340.0" minHeight="10.0" prefHeight="340.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Label fx:id="Lnome" text="MyFirstPreview" textAlignment="CENTER" GridPane.columnIndex="1">
-                           <font>
-                              <Font size="22.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="333.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <image>
-                              <Image url="@fundo-decorativo-roxo-com-gradiente_1057-3836.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label fx:id="Lsubtitulo" text="Introduce Yourself (Example Post)" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="Ltexto" layoutX="48.0" layoutY="141.0" prefHeight="24.0" prefWidth="318.0" text="Introduce Yourself " textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </GridPane>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Texto">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
                </children>
-            </AnchorPane>
-         </center>
-      </BorderPane>
+            </TextFlow>
+            <TextField fx:id="TFtexto" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#alteraTexto" prefHeight="25.0" prefWidth="84.0" text="Alterar" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#SVoltar" prefHeight="25.0" prefWidth="65.0" text="Voltar" GridPane.rowIndex="7" />
+            <Label fx:id="Lnome" text="MyFirstPreview" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="Lsubtitulo" prefHeight="24.0" prefWidth="288.0" text="Introduce Yourself " GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="261.0" fitWidth="307.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@fundo-decorativo-roxo-com-gradiente_1057-3836.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="Ltexto" prefHeight="24.0" prefWidth="318.0" text="Introduce Yourself " textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>

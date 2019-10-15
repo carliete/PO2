@@ -15,15 +15,14 @@ public class FifithController {
 	}
 
 	@FXML
-	private void QISite(ActionEvent action) throws IOException {
-		App.setRoot("Pag");
-	}
-
-	@FXML
 	private void QSite(ActionEvent action) throws IOException {
 		App.setRoot("ListPagin");
 	}
-	
+	@FXML
+	private void CriarWeb(ActionEvent action) throws IOException {
+		App.setRoot("TipoWebSite");
+	}
+		
 	@FXML
 	private void QFerramentas(ActionEvent action) throws IOException {
 		App.setRoot("Ferramentas");

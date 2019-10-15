@@ -9,6 +9,6 @@ public class TermosController {
 
 	@FXML
 	private void SVoltar(ActionEvent action) throws IOException {
-		App.setRoot("primary");
+		App.setRoot("Login");
 	}
 }

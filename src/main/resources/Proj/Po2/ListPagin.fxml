@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,7 +14,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" styleClass="imagem1" stylesheets="@imagem.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListPag">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" styleClass="imagem1" stylesheets="@imagem.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListPag">
    <children>
       <GridPane prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -25,16 +29,16 @@
             <Button mnemonicParsing="false" onAction="#Voltar" text="Voltar" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
             <TextFlow prefHeight="46.0" prefWidth="600.0" styleClass="imagem1" stylesheets="@imagem.css" textAlignment="CENTER">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SEUS WEBSITES APARECERÃO AQUI" textAlignment="CENTER">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WebSites" textAlignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="22.0" />
+                        <Font size="21.0" />
                      </font>
                   </Text>
                </children>
             </TextFlow>
             <ListView fx:id="Lista" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
             <Button mnemonicParsing="false" onAction="#delete" text="Apagar WebSite" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <Button mnemonicParsing="false" text="Editar WebSite" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Button mnemonicParsing="false" onAction="#editarSite" text="Editar WebSite" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
          </children>
       </GridPane>
    </children>
